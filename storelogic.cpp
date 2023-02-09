@@ -1,10 +1,13 @@
 #include <string>
-#include <storelogic.h>
+#include "storelogic.h"
 
 using namespace std; 
 
-Store::Store(){
+Store::~Store(){};
+
+Store::Store(string storeName){
     itemCount = 0;
+    name = storeName;
 };
 
 string Store::GetName(){
@@ -30,17 +33,7 @@ void Store::SetName(string storeName){
 
 };
 
-
-
-class Item {
-    public: 
-        string name; 
-        string type; 
-        int price;
-        int reference; 
-
-        Item(string itemName, int itemNumber){
-            name =  itemName;
-            reference = itemNumber; 
-        };
+Item::Item(string itemName, int itemNumber){
+    name =  itemName;
+    reference = itemNumber; 
 };

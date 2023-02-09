@@ -1,3 +1,5 @@
+#ifndef STORELOGIC_H
+#define STORELOGIC_H
 #include <string>
 
 using namespace std; 
@@ -9,7 +11,8 @@ class Store {
         int itemCount;
 
     public:
-        Store();
+        Store(string storeName);
+        ~Store();
 
         string GetName();
         string GetLocation();
@@ -28,4 +31,7 @@ class Item {
         int reference; 
 
         Item(string itemName, int itemNumber);
+        ~Item();
 };
+
+#endif
